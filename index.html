@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///C:/Users/syt08/Downloads/index.html -->
+<!-- saved from url=(0045)file:///C:/Users/syt08/Downloads/index_3.html -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     section { background: white; padding: 30px; margin: 20px auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     h2 { font-size: 28px; font-weight: 700; margin-bottom: 1rem; color: #1f2937; text-align: center; }
     .button-container { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-    .btn { display: block; width: 100%; padding: 12px 20px; background-color: #5a45b8; color: white; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s; text-align: center; }
+    .btn { display: block; width: 100%; max-width: 500px; margin-left: auto; margin-right: auto; padding: 12px 20px; background-color: #5a45b8; color: white; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s; text-align: center; }
     .btn:hover { background-color: #4a357f; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(90, 69, 184, 0.3); }
     .whatsapp-btn { background-color: #25D366; }
     .whatsapp-btn:hover { background-color: #1fa855; }
@@ -60,7 +60,7 @@
     <section class="hero">
       <div class="hero-content">
         <div style="text-align: center; margin-bottom: 1.5rem;">
-          <img src="./index_files/LSsm_en_img_top_headlogo.png" alt="Lifestyle Week" style="width: 100%; max-width: 500px; border-radius: 8px;">
+          <img src="./index_files/life_logo.jpg" alt="Lifestyle Week" style="width: 100%; max-width: 500px; border-radius: 8px;">
         </div>
         <h1 id="title">2026 Tokyo Lifestyle Week</h1>
         <p id="greeting">自社ブースへのご来場ありがとうございます。</p>
@@ -80,8 +80,8 @@
 
     <!-- Downloads -->
     <section>
-      <a class="btn" href="https://sauber.kr/?lang=en" target="_blank" style="background-color: #10b981; margin-bottom: 1rem;" id="homeBtn">🌐 ウェブサイトを訪問</a>
       <h2 id="downloadTitle">ダウンロード資料</h2>
+      <a class="btn" href="https://sauber.kr/?lang=en" target="_blank" style="background-color: #10b981; margin-bottom: 1rem;" id="homeBtn">🌐 ウェブサイトを訪問</a>
       <div class="button-container">
         <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=1bRjBn1e7baVjPW2dLUWJ8Dgood8-7cZN" download="" id="catalogBtn">📄 会社概要&amp;カタログ</a>
         <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=10V_va_4oyBTrYp1yh9BYNmvsuuVKgGFC" download="" id="priceBtn">💰 価格表 (OEM/ODM &amp; PB製品流通)</a>
@@ -242,10 +242,10 @@
     <!-- WhatsApp -->
     <section>
       <h2 id="contactTitle">WhatsApp お問い合わせ</h2>
-      <p id="contactText">ご質問やお問い合わせはWhatsAppでお気軽にどうぞ。</p>
-      <div style="display: flex; gap: 10px; justify-content: center;">
-        <button class="btn whatsapp-btn" onclick="showQR()" id="qrBtn" style="flex: 1;">QR コード表示</button>
-        <a class="btn whatsapp-btn" href="https://wa.me/821054883303" target="_blank" id="sendMsgBtn" style="flex: 1;">メッセージを送信</a>
+      <p id="contactText" style="text-align: center; margin-bottom: 1rem;">ご質問やお問い合わせはWhatsAppでお気軽にどうぞ。</p>
+      <div style="display: flex; gap: 10px; justify-content: center; max-width: 500px; margin: 0 auto;">
+        <button class="btn whatsapp-btn" onclick="showQR()" id="qrBtn" style="flex: 1; width: auto; max-width: none;">QR コード表示</button>
+        <a class="btn whatsapp-btn" href="https://wa.me/821054883303" target="_blank" id="sendMsgBtn" style="flex: 1; width: auto; max-width: none;">メッセージを送信</a>
       </div>
     </section>
 
@@ -272,7 +272,20 @@
         <p style="color: #5a45b8; font-weight: 500;">WhatsApp: yoontaekson@sauber.kr</p>
         <p style="color: #5a45b8; font-weight: 500;">WeChat: sunchenglee8</p>
       </div>
+      <button class="btn" onclick="showCard()" id="cardBtn">🗂️ 名刺</button>
     </section>
+
+    <!-- Business Card Modal -->
+    <div class="qr-modal" id="cardModal">
+      <div class="qr-modal-content">
+        <p id="cardTitle">名刺</p>
+        <div style="width: 100%; max-width: 400px; height: 250px; margin: 1rem auto; background-image: url(&#39;https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg&#39;); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #5a45b8; border-radius: 8px;"></div>
+        <div style="display: flex; gap: 10px; max-width: 400px; margin: 0 auto;">
+          <a class="btn" href="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg" download="" style="flex: 1; width: auto; max-width: none;" id="cardDownloadBtn">ダウンロード</a>
+          <button class="btn" onclick="showCard()" style="flex: 1; width: auto; max-width: none; background-color: #9ca3af;" id="cardCloseBtn">閉じる</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -296,6 +309,10 @@
         contactText: 'ご質問やお問い合わせはWhatsAppでお気軽にどうぞ。',
         qrBtn: 'QR コード表示',
         sendMsgBtn: 'メッセージを送信',
+        cardBtn: '🗂️ 名刺',
+        cardTitle: '名刺',
+        cardDownloadBtn: 'ダウンロード',
+        cardCloseBtn: '閉じる',
         qrTitle: 'WhatsApp QR コード',
         closeQrBtn: '閉じる',
         contactInfoTitle: 'お問い合わせ情報',
@@ -337,6 +354,10 @@
         contactText: 'Feel free to contact us via WhatsApp for any questions.',
         qrBtn: 'Show QR Code',
         sendMsgBtn: 'Send Message',
+        cardBtn: '🗂️ Business Card',
+        cardTitle: 'Business Card',
+        cardDownloadBtn: 'Download',
+        cardCloseBtn: 'Close',
         qrTitle: 'WhatsApp QR Code',
         closeQrBtn: 'Close',
         contactInfoTitle: 'Contact Information',
@@ -378,6 +399,10 @@
         contactText: 'WhatsApp을 통해 편하게 문의하세요.',
         qrBtn: 'QR 코드 보기',
         sendMsgBtn: '메시지 보내기',
+        cardBtn: '🗂️ 명함',
+        cardTitle: '명함',
+        cardDownloadBtn: '다운로드',
+        cardCloseBtn: '닫기',
         qrTitle: 'WhatsApp QR 코드',
         closeQrBtn: '닫기',
         contactInfoTitle: '담당자 정보',
@@ -426,6 +451,10 @@
       document.getElementById('contactText').textContent = t.contactText;
       document.getElementById('qrBtn').textContent = t.qrBtn;
       document.getElementById('sendMsgBtn').textContent = t.sendMsgBtn;
+      document.getElementById('cardBtn').textContent = t.cardBtn;
+      document.getElementById('cardTitle').textContent = t.cardTitle;
+      document.getElementById('cardDownloadBtn').textContent = t.cardDownloadBtn;
+      document.getElementById('cardCloseBtn').textContent = t.cardCloseBtn;
       document.getElementById('qrTitle').textContent = t.qrTitle;
       document.getElementById('closeQrBtn').textContent = t.closeQrBtn;
       document.getElementById('contactInfoTitle').textContent = t.contactInfoTitle;
@@ -465,6 +494,10 @@
 
     function showQR() {
       document.getElementById('qrModal').classList.toggle('active');
+    }
+
+    function showCard() {
+      document.getElementById('cardModal').classList.toggle('active');
     }
 
     // Initialize
