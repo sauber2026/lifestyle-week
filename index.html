@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/syt08/Downloads/index_6.html -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sauber - 2026 Tokyo Lifestyle Week</title>
   <style>
@@ -45,12 +45,12 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <img src="./index_files/logo.png" alt="Sauber" class="logo-img">
+        <img src="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/logo.png" alt="Sauber" class="logo-img">
       </div>
       <div class="lang-buttons">
-        <button class="lang-btn active" onclick="changeLang(&#39;ja&#39;, this)">日本語</button>
-        <button class="lang-btn" onclick="changeLang(&#39;en&#39;, this)">English</button>
-        <button class="lang-btn" onclick="changeLang(&#39;ko&#39;, this)">한국어</button>
+        <button class="lang-btn active" onclick="changeLang('ja', this)">日本語</button>
+        <button class="lang-btn" onclick="changeLang('en', this)">English</button>
+        <button class="lang-btn" onclick="changeLang('ko', this)">한국어</button>
       </div>
     </div>
   </header>
@@ -60,10 +60,10 @@
     <section class="hero">
       <div class="hero-content">
         <div style="text-align: center; margin-bottom: 1.5rem;">
-          <img src="./index_files/life_logo.jpg" alt="Lifestyle Week" style="width: 100%; max-width: 500px; border-radius: 8px;">
+          <img src="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/life_logo.jpg" alt="Lifestyle Week" style="width: 100%; max-width: 500px; border-radius: 8px;">
         </div>
         <h1 id="title">2026 Tokyo Lifestyle Week</h1>
-        <p id="greeting">自社ブースへのご来場ありがとうございます。</p>
+        <p id="greeting">Thank you for visiting our booth!</p>
         <p class="hero-subtitle">📍 Booth: L26-13 TOKYO BIG SIGHT</p>
         <p class="hero-subtitle">📅 June 24-26, 2026</p>
       </div>
@@ -71,199 +71,55 @@
 
     <!-- About -->
     <section>
-      <h2 id="aboutTitle">自社について</h2>
-      <p id="aboutText">自社は南韓国に拠点を置く環境にやさしい衛生及び消毒製品の大手メーカーです。カプセル洗剤、食器洗い機用タブレット、エタノール湿布、カスタムODMソリューションを専門としています。ISO9001認定。</p>
+      <h2 id="aboutTitle">About Sauber</h2>
+      <p id="aboutText"></p>
       <div style="margin-top: 1.5rem; text-align: center;">
-        <img src="./index_files/sauber_product.png" alt="Products" style="width: 100%; max-width: 500px; border-radius: 8px;">
+        <img src="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/sauber_product.png" alt="Products" style="width: 100%; max-width: 500px; border-radius: 8px;">
       </div>
     </section>
 
     <!-- Downloads -->
     <section>
-      <h2 id="downloadTitle">ダウンロード資料</h2>
-      <a class="btn" href="https://sauber.kr/?lang=en" target="_blank" style="background-color: #10b981; margin-bottom: 1rem;" id="homeBtn">🌐 ウェブサイトを訪問</a>
+      <h2 id="downloadTitle">Download Materials</h2>
+      <a class="btn" href="https://sauber.kr/?lang=en" target="_blank" style="background-color: #10b981; margin-bottom: 1rem;" id="homeBtn">🌐 Visit Website</a>
       <div class="button-container">
-        <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=1bRjBn1e7baVjPW2dLUWJ8Dgood8-7cZN" download="" id="catalogBtn">📄 会社概要&amp;カタログ</a>
-        <a class="btn" href="https://drive.google.com/uc?export=download&amp;id=10V_va_4oyBTrYp1yh9BYNmvsuuVKgGFC" download="" id="priceBtn">💰 価格表 (OEM/ODM &amp; PB製品流通)</a>
+        <a class="btn" href="https://drive.google.com/uc?export=download&id=1bRjBn1e7baVjPW2dLUWJ8Dgood8-7cZN" download id="catalogBtn">📄 Company Info & Catalog</a>
+        <a class="btn" href="https://drive.google.com/uc?export=download&id=10V_va_4oyBTrYp1yh9BYNmvsuuVKgGFC" download id="priceBtn">💰 Price Guide</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section>
-      <h2 id="faqTitle">よくあるご質問</h2>
-      <input type="text" id="searchBox" placeholder="検索..." style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px;">
-      <div id="faqList">
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>自社はどこに拠点を置き、どのような業界ですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">自社は南韓国の慶龍市に拠点を置く製造業者で、洗濯用カプセル、食器洗い機用タブレット、エタノール湿布など、様々な生活衛生用品を製造しています。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>最小発注数量（MOQ）はいくらですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">生産方式（ODMまたは自社ブランド）および商品カテゴリーによって異なります。詳細はご提供する見積もり表をご参照ください。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>自社の利点は？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">LG生活健康やコストコなど世界的なブランドのメーカーとして、ISO9001品質管理システムと韓国最大の生産設備に基づいた一貫性のある品質と大量生産を保証します。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>自社の技術力は？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">自社の研究開発センターとスマート自動化生産システムを運営し、研究から生産までのプロセス全体を統合しています。独自の処方と製造専門知識により、世界レベルで競争力があります。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>具体的にどのような製品を製造していますか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">高性能なカスタム洗濯用カプセル、高品質な環境対応食器洗い機タブレット、MFDS認可外用消毒薬、衛生湿布を専門としています。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>全ての製品を自社で製造していますか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">はい、全ての製品は自社設備で製造しています。原材料および部品は確認済みのパートナーから厳格な品質管理下で調達しています。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>製品開発経験がなくてもODM受注は可能ですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">はい、もちろんです。自社の豊富なODM実績に基づき、簡単なマーケティングコンセプトだけで製品企画と製造準備を支援することができます。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>カタログサンプル以上のカスタム生産は可能ですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">カプセルおよびタブレット洗剤は専用の型で生産されるため、新しいデザイン開発には新しい型の作成が必要です。(カプセル型新規開発に約20,000米ドル)</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>国別の認証要件に対応できますか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">様々なお客様の輸出要件に対応した経験があります。対象国の要件をご提供いただければ、ほとんどの技術文書及び処理が可能です。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>自社の特許及び認証は？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">ISO9001:2015国際認証及び洗剤関連特許（洗濯カプセル、食器洗い機用洗剤）を保有しています。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>輸出時のインコタームズは？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">基本的にはEXW及びFOB条件を提供していますが、CIF条件も交渉により対応可能です。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>最も近い港はどこですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">韓国の平沢港と釜山港が比較的近いです。指定港はなく、転送業者との調整により貴社ご希望の港での出荷手配が可能です。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>国際輸出の実績はありますか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">現在ベトナムと中国へODM製品を直接輸出しており、スウェーデンと台湾を含む複数国と協議中です。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>サンプル購入は可能ですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">自社ブランド（Sub.lab、Sauber等）のサンプル購入は段ボール箱単位（最小1箱）で可能です。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>支払い条件は？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">通常注文：前金50%、出庫前残金50%。サンプル購入：100%前払い。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>FTA原産地証明書は利用可能ですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">はい、韓国・EU、韓国・中国、韓国・ベトナム、韓国・ASEAN、RCEP協定の認定輸出者として公式に認定されています。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>パッケージデザインサービスを提供していますか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">パッケージデザインはお客様がご提供いただくのが原則です。ただし、専門の外注パートナーを通じた設計支援が可能です（追加料金）。</div>
-        </div>
-      
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFAQ(this)">
-            <span>お問い合わせはどうしたらいいですか？</span>
-            <span>+</span>
-          </button>
-          <div class="faq-answer">yoontaekson@sauber.krまでお問い合わせいただければ、最速かつ正確にご対応いたします。</div>
-        </div>
-      </div>
+      <h2 id="faqTitle">FAQ</h2>
+      <input type="text" id="searchBox" placeholder="Search..." style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px;">
+      <div id="faqList"></div>
     </section>
 
     <!-- WhatsApp -->
     <section>
-      <h2 id="contactTitle">WhatsApp お問い合わせ</h2>
-      <p id="contactText" style="text-align: center; margin-bottom: 1rem;">ご質問やお問い合わせはWhatsAppでお気軽にどうぞ。</p>
+      <h2 id="contactTitle">WhatsApp</h2>
+      <p id="contactText" style="text-align: center; margin-bottom: 1rem;"></p>
       <div style="display: flex; gap: 10px; justify-content: center; max-width: 500px; margin: 0 auto;">
-        <button class="btn whatsapp-btn" onclick="showQR()" id="qrBtn" style="flex: 1; width: auto; max-width: none;">QR コード表示</button>
-        <a class="btn whatsapp-btn" href="https://wa.me/821054883303" target="_blank" id="sendMsgBtn" style="flex: 1; width: auto; max-width: none;">メッセージを送信</a>
+        <button class="btn whatsapp-btn" onclick="showQR()" id="qrBtn" style="flex: 1; width: auto; max-width: none;">QR Code</button>
+        <a class="btn whatsapp-btn" href="https://wa.me/821054883303" target="_blank" id="sendMsgBtn" style="flex: 1; width: auto; max-width: none;">Send Message</a>
       </div>
     </section>
 
     <!-- QR Modal -->
     <div class="qr-modal" id="qrModal">
       <div class="qr-modal-content">
-        <p id="qrTitle">WhatsApp QR コード</p>
-        <div style="width: 300px; height: 533px; margin: 1rem auto; background-image: url(&#39;https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/WhatappQR.jpg&#39;); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #5a45b8; border-radius: 8px;"></div>
+        <p id="qrTitle">WhatsApp QR Code</p>
+        <div style="width: 300px; height: 533px; margin: 1rem auto; background-image: url('https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/WhatappQR.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #5a45b8; border-radius: 8px;"></div>
         <p>+82 10-5488-3303</p>
-        <button class="btn" onclick="showQR()" style="background-color: #9ca3af; margin-top: 15px;" id="closeQrBtn">閉じる</button>
+        <button class="btn" onclick="showQR()" style="background-color: #9ca3af; margin-top: 15px;" id="closeQrBtn">Close</button>
       </div>
     </div>
 
     <!-- Contact -->
     <section>
-      <h2 id="contactInfoTitle">お問い合わせ情報</h2>
+      <h2 id="contactInfoTitle">Contact Information</h2>
       <div class="business-card">
-        <p style="font-size: 16px; font-weight: 600; color: #1f2937; margin-bottom: 5px;" id="contactName">Son Yoontaek (Manager)</p>
+        <p style="font-size: 16px; font-weight: 600; color: #1f2937; margin-bottom: 5px;" id="contactName">Yoontaek Son (Manager)</p>
         <p style="color: #5a45b8;">Sales Director</p>
         <hr style="margin: 10px 0; border: none; border-top: 1px solid #e5e7eb;">
         <p id="email">📧 yoontaekson@sauber.kr</p>
@@ -272,17 +128,17 @@
         <p style="color: #5a45b8; font-weight: 500;">WhatsApp: yoontaekson@sauber.kr</p>
         <p style="color: #5a45b8; font-weight: 500;">WeChat: sunchenglee8</p>
       </div>
-      <button class="btn" onclick="showCard()" id="cardBtn">🗂️ 名刺</button>
+      <button class="btn" onclick="showCard()" id="cardBtn">🗂️ Business Card</button>
     </section>
 
     <!-- Business Card Modal -->
     <div class="qr-modal" id="cardModal">
       <div class="qr-modal-content">
-        <p id="cardTitle">名刺</p>
-        <div style="width: 100%; max-width: 400px; height: 250px; margin: 1rem auto; background-image: url(&#39;https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg&#39;); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #5a45b8; border-radius: 8px;"></div>
+        <p id="cardTitle">Business Card</p>
+        <div style="width: 100%; max-width: 400px; height: 250px; margin: 1rem auto; background-image: url('https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #5a45b8; border-radius: 8px;"></div>
         <div style="display: flex; gap: 10px; max-width: 400px; margin: 0 auto;">
-          <a class="btn" href="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg" download="" style="flex: 1; width: auto; max-width: none;" id="cardDownloadBtn">ダウンロード</a>
-          <button class="btn" onclick="showCard()" style="flex: 1; width: auto; max-width: none; background-color: #9ca3af;" id="cardCloseBtn">閉じる</button>
+          <a class="btn" href="https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/BusinessCard.jpg" download style="flex: 1; width: auto; max-width: none;" id="cardDownloadBtn">Download</a>
+          <button class="btn" onclick="showCard()" style="flex: 1; width: auto; max-width: none; background-color: #9ca3af;" id="cardCloseBtn">Close</button>
         </div>
       </div>
     </div>
@@ -505,6 +361,5 @@
       changeLang('ja');
     });
   </script>
-
-
-</body></html>
+</body>
+</html>
