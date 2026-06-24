@@ -84,7 +84,7 @@
       <a class="btn" href="https://sauber.kr/?lang=en" target="_blank" style="background-color: #10b981; margin-bottom: 1rem;" id="homeBtn">🌐 Visit Website</a>
       <div class="button-container">
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1bRjBn1e7baVjPW2dLUWJ8Dgood8-7cZN" download id="catalogBtn">📄 Company Info & Catalog</a>
-        <a class="btn" href="https://drive.google.com/uc?export=download&id=16tAlsxZU6A7i6rHoKYz7m1fOEl5wIfjX" download id="priceBtn">💰 Price Guide</a>
+        <a class="btn" href="https://drive.google.com/uc?export=download&id=10V_va_4oyBTrYp1yh9BYNmvsuuVKgGFC" download id="priceBtn">💰 Price Guide</a>
       </div>
     </section>
 
@@ -104,6 +104,27 @@
         <a class="btn whatsapp-btn" href="https://wa.me/821054883303" target="_blank" id="sendMsgBtn" style="flex: 1; width: auto; max-width: none;">Send Message</a>
       </div>
     </section>
+
+    <!-- WeChat -->
+    <section>
+      <h2 id="wechatTitle">WeChat</h2>
+      <p id="wechatText" style="text-align: center; margin-bottom: 1rem;"></p>
+      <div style="display: flex; gap: 10px; justify-content: center; max-width: 500px; margin: 0 auto;">
+        <button class="btn" onclick="showWechatQR()" id="wechatQrBtn" style="flex: 1; width: auto; max-width: none; background-color: #07C160;">QR Code</button>
+        <button class="btn" onclick="copyWechat()" id="wechatIdBtn" style="flex: 1; width: auto; max-width: none; background-color: #07C160;">ID: sunchenglee8</button>
+      </div>
+      <p id="wechatCopied" style="text-align: center; color: #07C160; font-size: 13px; margin-top: 8px; display: none;">✅ Copied!</p>
+    </section>
+
+    <!-- WeChat QR Modal -->
+    <div class="qr-modal" id="wechatQrModal">
+      <div class="qr-modal-content">
+        <p id="wechatQrTitle">WeChat QR Code</p>
+        <div style="width: 300px; height: 408px; margin: 1rem auto; background-image: url('https://raw.githubusercontent.com/sauber2026/lifestyle-week/main/WechatQR.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat; border: 2px solid #07C160; border-radius: 8px;"></div>
+        <p>WeChat ID: sunchenglee8</p>
+        <button class="btn" onclick="showWechatQR()" style="background-color: #9ca3af; margin-top: 15px;" id="wechatCloseBtn">Close</button>
+      </div>
+    </div>
 
     <!-- QR Modal -->
     <div class="qr-modal" id="qrModal">
@@ -171,6 +192,13 @@
         cardCloseBtn: '閉じる',
         qrTitle: 'WhatsApp QR コード',
         closeQrBtn: '閉じる',
+        wechatTitle: 'WeChat',
+        wechatText: 'WeChatでもお気軽にご連絡ください。',
+        wechatQrBtn: 'QR コード表示',
+        wechatIdBtn: 'ID: sunchenglee8',
+        wechatQrTitle: 'WeChat QR コード',
+        wechatCloseBtn: '閉じる',
+        wechatCopied: '✅ コピーしました！',
         contactInfoTitle: 'お問い合わせ情報',
         contactName: 'Son Yoontaek (Manager)',
         footer: '© 2026 Sauber Korea. All Rights Reserved.',
@@ -216,6 +244,13 @@
         cardCloseBtn: 'Close',
         qrTitle: 'WhatsApp QR Code',
         closeQrBtn: 'Close',
+        wechatTitle: 'WeChat',
+        wechatText: 'Feel free to contact us via WeChat as well.',
+        wechatQrBtn: 'Show QR Code',
+        wechatIdBtn: 'ID: sunchenglee8',
+        wechatQrTitle: 'WeChat QR Code',
+        wechatCloseBtn: 'Close',
+        wechatCopied: '✅ Copied!',
         contactInfoTitle: 'Contact Information',
         contactName: 'Yoontaek Son (Manager)',
         footer: '© 2026 Sauber Korea. All Rights Reserved.',
@@ -261,6 +296,13 @@
         cardCloseBtn: '닫기',
         qrTitle: 'WhatsApp QR 코드',
         closeQrBtn: '닫기',
+        wechatTitle: 'WeChat',
+        wechatText: 'WeChat으로도 편하게 연락주세요.',
+        wechatQrBtn: 'QR 코드 보기',
+        wechatIdBtn: 'ID: sunchenglee8',
+        wechatQrTitle: 'WeChat QR 코드',
+        wechatCloseBtn: '닫기',
+        wechatCopied: '✅ 복사됨!',
         contactInfoTitle: '담당자 정보',
         contactName: '손윤택 차장',
         footer: '© 2026 Sauber Korea. All Rights Reserved.',
@@ -307,6 +349,12 @@
       document.getElementById('contactText').textContent = t.contactText;
       document.getElementById('qrBtn').textContent = t.qrBtn;
       document.getElementById('sendMsgBtn').textContent = t.sendMsgBtn;
+      document.getElementById('wechatTitle').textContent = t.wechatTitle;
+      document.getElementById('wechatText').textContent = t.wechatText;
+      document.getElementById('wechatQrBtn').textContent = t.wechatQrBtn;
+      document.getElementById('wechatIdBtn').textContent = t.wechatIdBtn;
+      document.getElementById('wechatQrTitle').textContent = t.wechatQrTitle;
+      document.getElementById('wechatCloseBtn').textContent = t.wechatCloseBtn;
       document.getElementById('cardBtn').textContent = t.cardBtn;
       document.getElementById('cardTitle').textContent = t.cardTitle;
       document.getElementById('cardDownloadBtn').textContent = t.cardDownloadBtn;
@@ -346,6 +394,18 @@
       const answer = btn.nextElementSibling;
       answer.classList.toggle('active');
       btn.querySelector('span:last-child').textContent = answer.classList.contains('active') ? '−' : '+';
+    }
+
+    function showWechatQR() {
+      document.getElementById('wechatQrModal').classList.toggle('active');
+    }
+
+    function copyWechat() {
+      navigator.clipboard.writeText('sunchenglee8').then(() => {
+        const msg = // wechatCopied는 동적 처리;
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 2000);
+      });
     }
 
     function showQR() {
